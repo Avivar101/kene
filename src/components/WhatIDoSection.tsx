@@ -1,55 +1,62 @@
-import React from 'react';
+'use client';
 
-interface Service {
-  title: string;
-  description: string;
-  icon: string;
-}
+import { useState } from 'react';
 
-const WhatIDoSection: React.FC = () => {
-  const services: Service[] = [
-    {
-      title: 'Web Development',
-      description: 'Building modern, responsive websites with React and Next.js',
-      icon: '💻'
-    },
-    {
-      title: 'UI/UX Design',
-      description: 'Creating intuitive user interfaces and experiences',
-      icon: '🎨'
-    },
-    {
-      title: 'Consulting',
-      description: 'Helping businesses optimize their digital presence',
-      icon: '📈'
-    }
-  ];
+const services = [
+  {
+    id: 'data-analysis',
+    title: 'Data Analysis',
+    content:
+      'Transforming raw data into actionable insights through statistical analysis and visualization techniques.',
+  },
+  {
+    id: 'bi-development',
+    title: 'BI Development',
+    content:
+      'Creating interactive dashboards and reports that help businesses make data-driven decisions.',
+  },
+  {
+    id: 'python',
+    title: 'Python Development',
+    content:
+      'Building custom data solutions, automation scripts, and machine learning models.',
+  },
+  {
+    id: 'reports',
+    title: 'Reports & Dashboards',
+    content:
+      'Designing clear, informative reports that communicate complex data effectively.',
+  },
+];
+
+export default function WhatIDoSection() {
+  const [expandedSection, setExpandedSection] = useState<string | null>(null);
+
+  const toggleSection = (id: string) => {
+    setExpandedSection(prev => (prev === id ? null : id));
+  };
 
   return (
-    <section className="py-12 bg-gray-50 dark:bg-gray-800">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-white">
-          What I Do
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div 
-              key={index}
-              className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+    <section className="px-4 py-6">
+      <h2 className="text-2xl font-bold mb-6 text-center">What I Do</h2>
+      <div className="grid gap-4 max-w-md mx-auto">
+        {services.map(service => (
+          <div key={service.id} className="border rounded-lg overflow-hidden">
+            <button
+              className="w-full flex justify-between items-center p-4 bg-white"
+              onClick={() => toggleSection(service.id)}
             >
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                {service.description}
-              </p>
-            </div>
-          ))}
-        </div>
+              <span className="font-medium">{service.title}</span>
+              <span>{expandedSection === service.id ? '−' : '+'}</span>
+            </button>
+            {expandedSection === service.id && (
+              <div className="p-4 bg-gray-50 border-t">
+                <p className="text-gray-600">{service.content}</p>
+              </div>
+            )}
+          </div>
+        ))}
       </div>
     </section>
   );
-};
-
-export default WhatIDoSection;
+}
