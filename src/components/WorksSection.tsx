@@ -9,7 +9,7 @@ const categories = [
   { id: 'data-analysis', label: 'Data Analysis' },
   { id: 'bi-development', label: 'BI Development' },
   { id: 'python', label: 'Python' },
-  { id: 'reports', label: 'Reports & Dashboards' },
+  { id: 'automation', label: 'Automation' },
 ];
 
 export default function WorksSection() {
