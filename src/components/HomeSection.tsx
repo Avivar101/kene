@@ -89,7 +89,11 @@ export default function HomeSection({ setActiveSection }: HomeSectionProps) {
         {/* Hire Me CTA */}
         <div className="mt-12 text-center">
           <h3 className="text-xl font-semibold mb-2">Hire My Services</h3>
-          <p className="text-gray-600 mb-4">Starting from just $10 for high-impact data solutions.</p>
+          <p className="text-gray-600 mb-4">Starting from just
+            <span className="text-green-600 text-2xl italic font-bold px-2">
+              $10
+            </span> for high-impact data solutions.
+          </p>
           <a
             href="mailto:benjohnokezie@gmail.com?subject=Service%20Inquiry"
             className="inline-block bg-green-600 text-white px-6 py-2 rounded-md font-medium hover:bg-green-700 transition-colors"
