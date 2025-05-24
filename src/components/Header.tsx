@@ -1,21 +1,11 @@
 'use client';
 
 import { Menu, X } from 'lucide-react';
-import { Dispatch, SetStateAction, useState } from 'react';
+import {useState } from 'react';
 
-interface HeaderProps {
-  activeSection: string;
-  setActiveSection: Dispatch<SetStateAction<'home' | 'works' | 'articles' | 'whatido'>>;
-}
 
-const navItems = [
-  { id: 'home', label: 'Home' },
-  { id: 'works', label: 'Works' },
-  { id: 'articles', label: 'Articles' },
-  { id: 'whatido', label: 'What I Do' },
-];
 
-export default function Header({ activeSection, setActiveSection }: HeaderProps) {
+export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen(prev => !prev);
@@ -30,20 +20,21 @@ export default function Header({ activeSection, setActiveSection }: HeaderProps)
       </div>
       {menuOpen && (
         <div className="fixed inset-0 bg-white z-40 pt-16 px-6 pb-6">
-          <nav className="flex flex-col gap-6">
-            {navItems.map(item => (
-              <button
-                key={item.id}
-                className={`text-left text-xl py-2 ${activeSection === item.id ? 'text-indigo-600 font-medium' : 'text-gray-700'}`}
-                onClick={() => {
-                  setActiveSection(item.id as 'home' | 'works' | 'articles' | 'whatido');
-                  setMenuOpen(false);
-                }}
-              >
-                {item.label}
-              </button>
-            ))}
-          </nav>
+          <div className="flex flex-col items-end">
+            <button
+              onClick={toggleMenu}
+              className="mb-6 text-gray-600 hover:text-gray-900"
+              aria-label="Close menu"
+            >
+              ✕
+            </button>
+            <a
+              href="mailto:benjohnokezie@gmail.com?subject=Service%20Inquiry"
+              className="bg-green-600 text-white px-6 py-2 rounded-md font-medium hover:bg-green-700 transition-colors w-full text-center"
+            >
+              Hire Me Now
+            </a>
+          </div>
         </div>
       )}
     </header>
