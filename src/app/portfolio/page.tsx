@@ -14,7 +14,7 @@ export default function PortfolioPage() {
 
   return (
     <div className="font-sans text-gray-800 min-h-screen bg-gray-50">
-      <Header activeSection={activeSection} setActiveSection={setActiveSection} />
+      <Header/>
       <main className="pt-16 pb-16">
         {activeSection === 'home' && <HomeSection setActiveSection={setActiveSection} />}
         {activeSection === 'works' && <WorksSection />}
