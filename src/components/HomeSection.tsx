@@ -12,7 +12,14 @@ export default function HomeSection({ setActiveSection }: HomeSectionProps) {
   <div className="max-w-md mx-auto">
     <h1 className="text-3xl font-bold mb-4">Hello, I&apos;m Kene</h1>
     <p className="text-gray-600 mb-8">
-      A data professional specializing in analytics, visualization, and creating data-driven solutions.
+      A data professional specializing in analytics, visualization, and creating data-driven solutions using modern BI Tools.
+    </p>
+    <p className="text-gray-600 mb-8">
+      I turn data into insights and build Intelligent Business and Automation Solutions.
+      Focused on delivering high impact solutions that drive business growth and efficiency.
+    </p>
+    <p className="text-gray-600 mb-8">
+      I build solutions using Power BI, Python, SQL, Snowflake, dbt and more.
     </p>
     
     {/* Button - naturally left-aligned in flex-col layout */}
