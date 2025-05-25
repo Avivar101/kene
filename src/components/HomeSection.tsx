@@ -15,11 +15,11 @@ export default function HomeSection({ setActiveSection }: HomeSectionProps) {
             A data professional specializing in analytics, visualization, and creating data-driven solutions using modern BI Tools.
           </p>
           <p className="text-gray-600 mb-8">
-            I turn data into insights and build Intelligent Business and Automation Solutions.
-            Focused on delivering high impact solutions that drive business growth and efficiency.
+            I turn your data into insights and build Business Intelligent and Automation Solutions.
+            Focused on delivering high impact solutions that enables Data-Driven Organizations.
           </p>
           <p className="text-gray-600 mb-8">
-            I build solutions using Power BI, Python, SQL, Snowflake, dbt and more.
+            I offer BI Development and Data Analytics services using Power BI, Excel, SQL, Python and more.
           </p>
         
         {/* Button - naturally left-aligned in flex-col layout */}
