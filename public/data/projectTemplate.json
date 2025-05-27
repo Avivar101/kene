@@ -1,0 +1,12 @@
+[
+    {
+      "id": 1,
+      "title": "Sales Performance Dashboard",
+      "category": "bi-development",
+      "image": "https://unsplash.com/photos/graphs-of-performance-analytics-on-a-laptop-screen-JKUTrJ4vK00",
+      "description": "Interactive sales analytics dashboard with regional breakdown",
+      "tags": ["Power BI", "DAX", "SQL"],
+      "docUrl": "https://medium.com/@yourusername/sales-performance-dashboard-case-study"
+    }
+  ]
+  

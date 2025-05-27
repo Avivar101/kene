@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { Project } from '@/types';
 import Image from 'next/image';
+import { getTagStyle } from '@/utils/colorTags';
 
 const categories = [
   { id: 'all', label: 'All' },
@@ -20,7 +21,8 @@ export default function WorksSection() {
     const loadProjects = async () => {
       const res = await fetch('/data/projects.json');
       const data = await res.json();
-      setProjects(data);
+      const sorted = [...data].sort((a, b) => b.id - a.id); // Highest ID first
+      setProjects(sorted);
     };
     loadProjects();
   }, []);
@@ -70,11 +72,24 @@ export default function WorksSection() {
               <p className="text-gray-600 text-sm mb-3">{project.description}</p>
               <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag, index) => (
-                  <span key={index} className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">
+                  <span
+                  key={index}
+                  className={`text-xs px-2 py-1 rounded font-medium ${getTagStyle(tag)}`}
+                >
                     {tag}
                   </span>
                 ))}
               </div>
+                {project.docUrl && (
+                  <a
+                    href={project.docUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-indigo-600 font-medium hover:underline"
+                  >
+                    Read Case Study →
+                  </a>
+                )}
             </div>
           </div>
         ))}

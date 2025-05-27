@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
       <div className="flex justify-between items-center p-4">
-        <div className="font-bold text-xl text-indigo-600">Portfolio</div>
+        <div className="font-bold text-xl text-indigo-600">Kene</div>
         <button onClick={toggleMenu} className="p-1" aria-label="Toggle menu">
           {menuOpen ? '✕' : '☰'}
         </button>

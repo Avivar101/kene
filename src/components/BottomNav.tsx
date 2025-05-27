@@ -10,7 +10,7 @@ interface BottomNavProps {
 
 const navItems: NavItem[] = [
   { id: 'home', label: 'Home' },
-  { id: 'works', label: 'Works' },
+  { id: 'works', label: 'My Works' },
   { id: 'articles', label: 'Articles' },
   { id: 'whatido', label: 'What I Do' },
 ];

@@ -7,6 +7,7 @@ export interface Project {
     image: string;
     description: string;
     tags: string[];
+    docUrl: string;
   }
   
   export interface Article {
