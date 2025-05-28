@@ -87,7 +87,7 @@ export default function HomeSection({ setActiveSection }: HomeSectionProps) {
           </a>
         </div>
         {/* Hire Me CTA */}
-        <div className="mt-12 text-center">
+        {/* <div className="mt-12 text-center">
           <h3 className="text-xl font-semibold mb-2">Hire My Services</h3>
           <p className="text-gray-600 mb-4">Starting from just
             <span className="text-green-600 text-2xl italic font-bold px-2">
@@ -100,7 +100,7 @@ export default function HomeSection({ setActiveSection }: HomeSectionProps) {
           >
             Hire Me Now →
           </a>
-        </div>  
+        </div> */}  
       </div>
 </section>
   );
