@@ -38,7 +38,9 @@ export default function HomeSection({ setActiveSection }: HomeSectionProps) {
               transition-all duration-300 ease-in-out
               hover:bg-indigo-100 hover:shadow-lg hover:-translate-y-0.5
               flex items-center justify-center
-            " 
+            "
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="Email">
             <Image 
               src="https://img.icons8.com/color/48/gmail-new.png" 
@@ -57,6 +59,8 @@ export default function HomeSection({ setActiveSection }: HomeSectionProps) {
               hover:bg-gray-100 hover:shadow-lg hover:-translate-y-0.5
               flex items-center justify-center
             " 
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="Medium">
             <Image 
               src="https://img.icons8.com/ios-filled/50/medium-logo.png" 
@@ -75,6 +79,8 @@ export default function HomeSection({ setActiveSection }: HomeSectionProps) {
               hover:bg-red-100 hover:shadow-lg hover:-translate-y-0.5
               flex items-center justify-center
             " 
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="YouTube">
             <Image 
               src="https://img.icons8.com/color/48/youtube-play.png" 
