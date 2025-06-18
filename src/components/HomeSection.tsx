@@ -68,7 +68,7 @@ export default function HomeSection({ setActiveSection }: HomeSectionProps) {
             />
           </a>
           <a 
-            href="https://www.youtube.com/@MasterBusinessIntelligence" 
+            href="https://www.youtube.com/@keneAnalytics" 
             className="
               p-2 bg-white rounded-full shadow-md
               transition-all duration-300 ease-in-out
