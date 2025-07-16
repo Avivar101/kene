@@ -1,6 +1,8 @@
 'use client';
 
 import Image from 'next/image';
+import ImageCarousel from './carousel';
+
 
 interface HomeSectionProps {
   setActiveSection: React.Dispatch<React.SetStateAction<'home' | 'works' | 'articles' | 'whatido'>>;
@@ -12,14 +14,14 @@ export default function HomeSection({ setActiveSection }: HomeSectionProps) {
       <div className="max-w-md mx-auto">
         <h1 className="text-3xl font-bold mb-4">Hello, I&apos;m Kene</h1>
           <p className="text-gray-600 mb-8">
-            A data professional specializing in analytics, visualization, and creating data-driven solutions using modern BI Tools.
+            I specialize in building Power BI dashboards with ETL pipelines, capturing relevant KPIs and developing visually appealing dashboards and reports
           </p>
           <p className="text-gray-600 mb-8">
-            I turn your data into insights and build Business Intelligent and Automation Solutions.
-            Focused on delivering high impact solutions that enables Data-Driven Organizations.
+            I help you turn your data into insights and build Business Intelligent and Automation Solutions.
+            Focused on delivering high impact solutions that enables Data-Driven Results.
           </p>
           <p className="text-gray-600 mb-8">
-            I offer BI Development and Data Analytics services using Power BI, Excel, SQL, Python and more.
+            My tools include Power BI, SQL, Python, API sources, Power Automate.
           </p>
         
         {/* Button - naturally left-aligned in flex-col layout */}
@@ -92,21 +94,9 @@ export default function HomeSection({ setActiveSection }: HomeSectionProps) {
             />
           </a>
         </div>
-        {/* Hire Me CTA */}
-        {/* <div className="mt-12 text-center">
-          <h3 className="text-xl font-semibold mb-2">Hire My Services</h3>
-          <p className="text-gray-600 mb-4">Starting from just
-            <span className="text-green-600 text-2xl italic font-bold px-2">
-              $10
-            </span> for high-impact data solutions.
-          </p>
-          <a
-            href="mailto:benjohnokezie@gmail.com?subject=Service%20Inquiry"
-            className="inline-block bg-green-600 text-white px-6 py-2 rounded-md font-medium hover:bg-green-700 transition-colors"
-          >
-            Hire Me Now →
-          </a>
-        </div> */}  
+        
+        <ImageCarousel />
+
       </div>
 </section>
   );
