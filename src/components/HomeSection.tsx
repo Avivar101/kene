@@ -74,7 +74,7 @@ export default function HomeSection({ setActiveSection }: HomeSectionProps) {
             />
           </a>
           <a 
-            href="https://www.youtube.com/@keneAnalytics" 
+            href="https://www.tiktok.com/@toji6135" 
             className="
               p-2 bg-white rounded-full shadow-md
               transition-all duration-300 ease-in-out
@@ -85,8 +85,8 @@ export default function HomeSection({ setActiveSection }: HomeSectionProps) {
             rel="noopener noreferrer"
             aria-label="YouTube">
             <Image 
-              src="https://img.icons8.com/color/48/youtube-play.png" 
-              alt="YouTube" 
+              src="https://img.icons8.com/color/48/tiktok--v1.png" 
+              alt="TikTok" 
               width={20}
               height={20}
               className="w-5 h-5"
