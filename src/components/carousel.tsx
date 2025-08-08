@@ -58,8 +58,8 @@ const ImageCarousel = () => {
               <Image 
                     src={image.src}
                     alt={image.title}
-                    width={20}
-                    height={110}
+                    width={10}
+                    height={10}
                     className="w-full h-full object-cover"
                     unoptimized
                 />
