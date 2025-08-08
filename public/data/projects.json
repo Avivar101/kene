@@ -1,12 +1,22 @@
 [
     {
-        "id": 1,
-        "title": "My Crypto BI Project",
+        "id": 2,
+        "title": "Automating Quarterly Financial Reporting using Power BI and Power Automate",
         "category": "bi-development",
-        "image": "https://miro.medium.com/v2/resize:fit:786/format:webp/1*W_Cz_3q-CnuT2fdQ6-Dvkg.jpeg",
-        "description": "Building a Full-Stack BI project",
-        "tags": ["Power BI", "DAX", "SQL", "Python"],
-        "docUrl": "https://medium.com/@benjohnokezie/my-crypto-bi-project-3e5e15da1738"
-      }
+        "image": "https://miro.medium.com/v2/resize:fit:786/format:webp/1*TVC1cdWRmEJezM9a-JbMcQ.png",
+        "description": "Building an Automated Reporting System",
+        "tags": ["Power BI", "Power Automate"],
+        "docUrl": "https://medium.com/@benjohnokezie/automating-quarterly-financial-reporting-for-using-power-bi-and-power-automate-22b07300a706"
+    },
+    {
+      "id": 1,
+      "title": "My Crypto BI Project",
+      "category": "bi-development",
+      "image": "https://miro.medium.com/v2/resize:fit:786/format:webp/1*W_Cz_3q-CnuT2fdQ6-Dvkg.jpeg",
+      "description": "Building a Full-Stack BI project",
+      "tags": ["Power BI", "DAX", "SQL", "Python"],
+      "docUrl": "https://medium.com/@benjohnokezie/my-crypto-bi-project-3e5e15da1738"
+  }
+
 ]
   
