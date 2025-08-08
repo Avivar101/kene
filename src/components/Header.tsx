@@ -49,7 +49,7 @@ export default function Header() {
               rel="noopener noreferrer"
               className="bg-green-600 text-white px-6 py-2 rounded-md font-medium hover:bg-green-700 transition-colors w-full text-center"
             >
-              Download My CV
+              Download my CV
             </a>
           </div>
         </div>
