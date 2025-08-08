@@ -1,12 +1,28 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+
 
 export default function Header() {
+
+  // open and close menu
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen(prev => !prev);
 
+  // mobile/desktop CV download state
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setIsMobile(/Mobi|Android/i.test(navigator.userAgent));
+    }
+  }, []);
+
+  const cvPath = "/files/My-CV.pdf";
+
+
+// code
   return (
     <header className="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
       <div className="flex justify-between items-center p-4">
@@ -27,10 +43,13 @@ export default function Header() {
               ✕
             </button>
             <a
-              href="mailto:sarah@example.com?subject=Service%20Inquiry"
+              href= {cvPath}
+              {...(!isMobile && { download: "Ben-CV.pdf" })} // download only on desktop
+              target={isMobile ? "_blank" : undefined} // open in new tab on mobile
+              rel="noopener noreferrer"
               className="bg-green-600 text-white px-6 py-2 rounded-md font-medium hover:bg-green-700 transition-colors w-full text-center"
             >
-              Hire Me Now
+              Download CV
             </a>
           </div>
         </div>

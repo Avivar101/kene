@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from "next/link";
 
 const ImageCarousel = () => {
   // Sample images - replace with your actual images
-  const images = [
-    'https://miro.medium.com/v2/resize:fit:786/format:webp/1*MD08l6pLVJyWDMN09HichQ.jpeg',
-    'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=400&fit=crop',
-    'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=400&fit=crop',
-    'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop',
-    'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&h=400&fit=crop'
-  ];
+    const images = [
+      {src: "https://miro.medium.com/v2/resize:fit:786/format:webp/1*TVC1cdWRmEJezM9a-JbMcQ.png", title: "Financial Report Automation with Power BI and Power Automate", link: "https://drive.google.com/drive/folders/1goRRhrdDezVseJx_UNPD82LEjn-idkcg?usp=drive_link"},
+      {src: "https://miro.medium.com/v2/resize:fit:786/format:webp/1*MD08l6pLVJyWDMN09HichQ.jpeg", title: "Crypto Data Analysis from Coingecko API", link: "https://drive.google.com/drive/folders/1IfRGke7NlyigE0zUVfp_HF9yAkVEFeMB?usp=drive_link"},
+      {src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop", title: "", link: ""},
+      {src: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&h=400&fit=crop", title: "", link: ""}
+    ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -54,15 +54,20 @@ const ImageCarousel = () => {
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {images.map((image, index) => (
-            <div key={index} className="w-full h-full flex-shrink-0">
+            <div key={index} className="w-full h-[250] flex-shrink-0 relative">
               <Image 
-                    src={image}
-                    alt={`Slide ${index + 1}`}
+                    src={image.src}
+                    alt={image.title}
                     width={20}
-                    height={11}
+                    height={110}
                     className="w-full h-full object-cover"
                     unoptimized
                 />
+                <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white text-sm md:text-lg p-2">
+                  <Link href={image.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                  {image.title}
+                  </Link>
+                </div>
             </div>
           ))}
         </div>
