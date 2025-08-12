@@ -7,6 +7,15 @@
       "excerpt": "Let’s build a simple web scraper",
       "url": "https://medium.com/@benjohnokezie/web-scraping-101-building-a-basic-web-scraper-using-python-9958237e8355",
       "readTime": "4 min read"
+    },
+    {
+      "id": 2,
+      "title": "Analysing customer Insights and Segmentaion using Python",
+      "image": "https://miro.medium.com/v2/resize:fit:786/format:webp/1*qPFEnE8KWHPxCAIE9GdX6g.png",
+      "date": "Jul 8, 2025",
+      "excerpt": "Discovering valuble insights from customers",
+      "url": "https://medium.com/@benjohnokezie/customer-insights-and-segmentation-analysis-18fc3f2ea094",
+      "readTime": "4 min read"
     }
   ]
   
