@@ -8,8 +8,11 @@ const ImageCarousel = () => {
     const images = [
       {src: "https://miro.medium.com/v2/resize:fit:786/format:webp/1*TVC1cdWRmEJezM9a-JbMcQ.png", title: "Financial Report Automation with Power BI and Power Automate", link: "https://drive.google.com/drive/folders/1goRRhrdDezVseJx_UNPD82LEjn-idkcg?usp=drive_link"},
       {src: "https://miro.medium.com/v2/resize:fit:786/format:webp/1*MD08l6pLVJyWDMN09HichQ.jpeg", title: "Crypto Data Analysis from Coingecko API", link: "https://drive.google.com/drive/folders/1IfRGke7NlyigE0zUVfp_HF9yAkVEFeMB?usp=drive_link"},
-      {src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop", title: "", link: ""},
-      {src: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&h=400&fit=crop", title: "", link: ""}
+      {src: "https://miro.medium.com/v2/resize:fit:640/format:webp/1*hw-6yI5h-NGCyaGxntd8GA.png", title: "E-commerce Dashboard", link: "https://benjohnokezie.medium.com/power-bi-projects-a2febffbe8e2"},
+      {src: "https://miro.medium.com/v2/resize:fit:640/format:webp/1*VcIyUEa-CasyqaBp4BM_FQ.jpeg", title: "E-commerce Dashboard", link: "https://benjohnokezie.medium.com/power-bi-projects-a2febffbe8e2"},
+      {src: "https://miro.medium.com/v2/resize:fit:640/format:webp/1*Z8uFcVvxRYIDZop4gAzLRg.jpeg", title: "Executive Finance Dashboard", link: "https://benjohnokezie.medium.com/power-bi-projects-a2febffbe8e2"},
+      {src: "https://miro.medium.com/v2/resize:fit:640/format:webp/1*f4J8NIcLTS1VS543KvnX6w.jpeg", title: "Executive Finance Dashboard", link: "https://benjohnokezie.medium.com/power-bi-projects-a2febffbe8e2"},
+      {src: "https://miro.medium.com/v2/resize:fit:640/format:webp/1*1VABd6NP4PJVBy9gRbOamw.jpeg", title: "Content Performance Analytics Dashboard", link:"https://benjohnokezie.medium.com/power-bi-projects-a2febffbe8e2"}
     ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
